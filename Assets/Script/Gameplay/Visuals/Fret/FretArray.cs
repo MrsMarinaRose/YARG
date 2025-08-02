@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using YARG.Core;
 using YARG.Core.Chart;
@@ -47,7 +48,7 @@ namespace YARG.Gameplay.Visuals
                 // Spawn
                 var fret = Instantiate(fretPrefab, transform);
                 fret.SetActive(true);
-                int rowsAvailable = (FretCount / 2) + 1;
+                int rowsAvailable = (int)math.ceil(FretCount / 2);
 
                 // Position
                 if (DoubledFrets && (i > 2))
