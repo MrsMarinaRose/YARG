@@ -41,7 +41,8 @@ namespace YARG.Themes
                 {
                     GameMode.FiveFretGuitar,
                     GameMode.FourLaneDrums,
-                    GameMode.FiveLaneDrums
+                    GameMode.FiveLaneDrums,
+                    GameMode.SixFretGuitar
                 },
                 PreferredColorProfile = ColorProfile.AprilFoolsDefault.Id,
                 PreferredCameraPreset = CameraPreset.CircularDefault.Id,

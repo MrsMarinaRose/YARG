@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28e186375864caea5493965bbe56975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FretCount: 5
+  FretCount: 6
   DontFlipColorsLeftyFlip: 0
   UseKickFrets: 0
   DoubledFrets: 1

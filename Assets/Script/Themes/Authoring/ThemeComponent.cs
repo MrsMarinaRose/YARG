@@ -47,6 +47,7 @@ namespace YARG.Themes
                 GameMode.FourLaneDrums  => _fourLaneNotes,
                 GameMode.FiveLaneDrums  => _fiveLaneNotes,
                 GameMode.ProKeys        => _proKeysNotes,
+                GameMode.SixFretGuitar => _fiveFretNotes,
                 _ => throw new Exception("Unreachable.")
             };
 
@@ -86,6 +87,7 @@ namespace YARG.Themes
                 GameMode.FiveFretGuitar => _fiveFretFret,
                 GameMode.FourLaneDrums  => _fourLaneFret,
                 GameMode.FiveLaneDrums  => _fiveLaneFret,
+                GameMode.SixFretGuitar => _fiveLaneFret,
                 _  => throw new Exception("Unreachable.")
             };
         }
