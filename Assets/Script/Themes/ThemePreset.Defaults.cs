@@ -46,6 +46,19 @@ namespace YARG.Themes
                 },
                 PreferredColorProfile = ColorProfile.AprilFoolsDefault.Id,
                 PreferredCameraPreset = CameraPreset.CircularDefault.Id,
+            },
+            new ThemePreset("Angled (Six Fret)", true)
+            { 
+                AssetBundleThemePath = "Themes/AprilFools",
+                SupportedGameModes =
+                {
+                    GameMode.FiveFretGuitar,
+                    GameMode.FourLaneDrums,
+                    GameMode.FiveLaneDrums,
+                    GameMode.SixFretGuitar
+                },
+                PreferredColorProfile = ColorProfile.AprilFoolsDefault.Id,
+                PreferredCameraPreset = CameraPreset.CircularDefault.Id,
             }
         };
     }
