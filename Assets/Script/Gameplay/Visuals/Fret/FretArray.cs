@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 using YARG.Core;
 using YARG.Core.Chart;
@@ -16,6 +16,7 @@ namespace YARG.Gameplay.Visuals
         public int FretCount;
         public bool DontFlipColorsLeftyFlip;
         public bool UseKickFrets;
+        public bool DoubledFrets;
 
         [SerializeField]
         private float _trackWidth = 2f;
@@ -46,14 +47,36 @@ namespace YARG.Gameplay.Visuals
                 // Spawn
                 var fret = Instantiate(fretPrefab, transform);
                 fret.SetActive(true);
+                int rowsAvailable = (FretCount / 2) + 1;
 
                 // Position
-                float x = _trackWidth / FretCount * i - _trackWidth / 2f + 1f / FretCount;
-                fret.transform.localPosition = new Vector3(leftyFlip ? -x : x, 0f, 0f);
+                if (DoubledFrets && (i > 2))
+                {
+                    // Black row
+                    int laneCounter = i - 3;
+                    float x = (_trackWidth / rowsAvailable * laneCounter) - (_trackWidth / 2f) + (1f / rowsAvailable);
+                    fret.transform.localPosition = new Vector3(leftyFlip ? -x : x, 0f, 0.2f);
 
-                // Scale
-                float scale = (_trackWidth / WIDTH_NUMERATOR) / (FretCount / WIDTH_DENOMINATOR);
-                fret.transform.localScale = new Vector3(scale, 1f, 1f);
+                    float scale = (_trackWidth / WIDTH_NUMERATOR) / (rowsAvailable / WIDTH_DENOMINATOR);
+                    fret.transform.localScale = new Vector3(scale, 1f, 1f);
+                }
+                else if (DoubledFrets && (i <= 2))
+                {
+                    // White row
+                    float x = _trackWidth / rowsAvailable * i - _trackWidth / 2f + 1f / rowsAvailable;
+                    fret.transform.localPosition = new Vector3(leftyFlip ? -x : x, 0f, 0f);
+
+                    float scale = (_trackWidth / WIDTH_NUMERATOR) / (rowsAvailable / WIDTH_DENOMINATOR);
+                    fret.transform.localScale = new Vector3(scale, 1f, 1f);
+                }
+                else
+                {
+                    float x = _trackWidth / FretCount * i - _trackWidth / 2f + 1f / FretCount;
+                    fret.transform.localPosition = new Vector3(leftyFlip ? -x : x, 0f, 0f);
+
+                    float scale = (_trackWidth / WIDTH_NUMERATOR) / (FretCount / WIDTH_DENOMINATOR);
+                    fret.transform.localScale = new Vector3(scale, 1f, 1f);
+                }
 
                 // Add
                 var fretComp = fret.GetComponent<Fret>();

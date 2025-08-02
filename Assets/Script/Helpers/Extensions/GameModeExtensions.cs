@@ -11,6 +11,7 @@ namespace YARG.Helpers.Extensions
             {
                 GameMode.FiveFretGuitar => "guitar",
                 GameMode.SixFretGuitar  => "guitar",
+                // GameMode.SixFretGuitar  => "ghlGuitar",
 
                 GameMode.FourLaneDrums  => "drums",
                 GameMode.FiveLaneDrums  => "ghDrums",

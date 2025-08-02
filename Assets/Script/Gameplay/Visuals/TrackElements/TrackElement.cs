@@ -79,7 +79,15 @@ namespace YARG.Gameplay.Visuals
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected static float GetElementX(int index, int subdivisions)
         {
-            return TrackPlayer.TRACK_WIDTH / subdivisions * index - TrackPlayer.TRACK_WIDTH / 2f - 1f / subdivisions;
+            if (subdivisions == 6) // this is a BS hack I promise to do better later okay
+            {
+                if (index > 3) index -= 3;
+                return TrackPlayer.TRACK_WIDTH / (subdivisions / 2) * index - TrackPlayer.TRACK_WIDTH / 2f - 1f / (subdivisions / 2);
+            }
+            else
+            {
+                return TrackPlayer.TRACK_WIDTH / subdivisions * index - TrackPlayer.TRACK_WIDTH / 2f - 1f / subdivisions;
+            }
         }
     }
 }

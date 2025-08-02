@@ -1392,9 +1392,10 @@ MonoBehaviour:
   _lyricBar: {fileID: 1047079480}
   <VocalTrack>k__BackingField: {fileID: 1312797156}
   ShowIndex: 0
-  _fiveFretGuitarPrefab: {fileID: 7381119128095886790, guid: 0f7a37c9e4abcad4da73b7603d4b7596,
+  _fiveFretGuitarPrefab: {fileID: 7381119128095886790, guid: 1c5decd1e1f89d647b9a727d0273f93a,
     type: 3}
-  _sixFretGuitarPrefab: {fileID: 0}
+  _sixFretGuitarPrefab: {fileID: 7381119128095886790, guid: 1c5decd1e1f89d647b9a727d0273f93a,
+    type: 3}
   _fourLaneDrumsPrefab: {fileID: 7508612376246159914, guid: 14dfc37fcbd6e0c4ba41507437a52fea,
     type: 3}
   _fiveLaneDrumsPrefab: {fileID: 7912406415472637727, guid: b98748e11cf38534c814f11da4eaa863,
@@ -1495,7 +1496,7 @@ PrefabInstance:
     - target: {fileID: 227366190812778480, guid: 039fee0ec42345d4f88c0625255415d4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 157.1503
+      value: -142.36191
       objectReference: {fileID: 0}
     - target: {fileID: 1335195020114372814, guid: 039fee0ec42345d4f88c0625255415d4,
         type: 3}
@@ -1700,7 +1701,7 @@ PrefabInstance:
     - target: {fileID: 2517693471320601084, guid: 039fee0ec42345d4f88c0625255415d4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -157.1503
+      value: 142.36191
       objectReference: {fileID: 0}
     - target: {fileID: 2640522790579517911, guid: 039fee0ec42345d4f88c0625255415d4,
         type: 3}
@@ -6330,7 +6331,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -27.5, y: 40}
+  m_AnchoredPosition: {x: -27.499878, y: 40}
   m_SizeDelta: {x: -845, y: 150}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1338572398
