@@ -166,7 +166,7 @@ namespace YARG.Gameplay.Visuals
 
         private void UpdateColor()
         {
-            var colors = Player.Player.ColorProfile.FiveFretGuitar;
+            var colors = Player.Player.ColorProfile.SixFretGuitar;
 
             // Get which note color to use
             var colorNoStarPower = colors.GetNoteColor(NoteRef.Fret);

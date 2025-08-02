@@ -57,7 +57,7 @@ namespace YARG.Themes
                     GameMode.FiveLaneDrums,
                     GameMode.SixFretGuitar
                 },
-                PreferredColorProfile = ColorProfile.AprilFoolsDefault.Id,
+                PreferredColorProfile = ColorProfile.GHLDefault.Id,
                 PreferredCameraPreset = CameraPreset.CircularDefault.Id,
             }
         };
